@@ -4,13 +4,13 @@ function setup()
   createCanvas(1200,1000);
 
 }
-
+//did you know that it is possible to pasteurize a glass of milk in the Dasht-E-Lut desert in Iran simply by leaving it in the open air?
 function draw()
 {
   //create a background using RGB values
-  background(58,74,1290)
+  background(58,304,290)
   // change the paint brush to a specific color according to RGB values
-  fill(1119,190,125);
+  fill(111,190,25);
   // create a rectangle at x,y coordinates 10,10 with length x height at 100 x 50
   rect(1099,499,100,500);
   rect(1189,1,10,50);
