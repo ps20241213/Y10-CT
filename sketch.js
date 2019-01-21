@@ -8,7 +8,7 @@ function setup()
 function draw()
 {
   //create a background using RGB values
-  background(158,114,1290)
+  background(58,74,1290)
   // change the paint brush to a specific color according to RGB values
   fill(1119,190,125);
   // create a rectangle at x,y coordinates 10,10 with length x height at 100 x 50
