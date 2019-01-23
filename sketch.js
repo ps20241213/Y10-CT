@@ -12,7 +12,9 @@ function draw()
   //create a background using RGB values
   background(58,304,290)
   // change the paint brush to a specific color according to RGB values
-  fill(11,19,25);
+  fill(19,209,25);
+  stroke(0,0,0);
+  strokeWeight(3);
   // create a rectangle at x,y coordinates 10,10 with length x height at 100 x 50
   //reference points for rectangles is at TOP LEFT CORNER; account for shifts
   rect(1099,499,100,500);
@@ -23,7 +25,10 @@ function draw()
   rect(699,100,300,320);
   rect(590,490,10,10);
 
-  fill(22,22,129)
-  rect(199,499,204,203)
+  fill(22,22,129);
+  stroke(255,255,255);
+  strokeWeight(2);
+
+  rect(199,499,204,203);
 
 }
