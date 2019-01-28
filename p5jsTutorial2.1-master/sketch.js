@@ -3,9 +3,9 @@ var button2Y;
 
 function setup()
 {
-  createCanvas(700,500);
+  createCanvas(1000,700);
   button2X = 10;
-  button2Y = 150;
+  button2Y = 450;
 
 
 }
@@ -15,7 +15,7 @@ function draw()
 	background(125,125,125)
 
 
-	if (mouseX > 10 && mouseX < 10 + 100 && mouseY > 10 && mouseY < 10+50)
+	if (mouseX > 10 && mouseX < 10 + 320 && mouseY > 10 && mouseY < 10+50)
 	{
 		fill(55,20,100);
 		stroke(0,0,0);
@@ -40,7 +40,7 @@ function draw()
 	stroke(0,0,0);
 	rect(button2X,button2Y,180,50);
 
-	if (mouseX > button2X && mouseX < button2X + 100 && mouseY > button2Y && mouseY < button2Y+50)
+	if (mouseX > button2X && mouseX < button2X + 180 && mouseY > button2Y && mouseY < button2Y+50)
 	{
 		fill(248,89,255);
 		stroke(51,70,190);
@@ -52,7 +52,7 @@ function draw()
 		fill(255,255,255);
 		stroke(30,30,30);
 		textSize(16);
-		text("Clikk",button2X+30,button2Y+30);
+		text("Clikk mi now",button2X+30,button2Y+30);
 	}
 
 }
