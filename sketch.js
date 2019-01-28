@@ -1,45 +1,71 @@
+var button2X;
+var button2Y;
+var button2Z;
+
 function setup()
 {
-  //create a drawing service 700px wide, 500px tall
-  createCanvas(1200,1000);
+  createCanvas(1000,700);
+  button2X = 10;
+  button2Y = 450;
+  button2Z = 385
+
 
 }
-//did you know that it is possible to pasteurize a glass of milk in the
-//Dasht-E-Lut desert in Iran simply by leaving it in the open air?
 
 function draw()
 {
-  //create a background using RGB values
-  background(250,240,120)
-  // change the paint brush to a specific color according to RGB values
-  fill(19,209,25);
-  stroke(20,190,160);
-  strokeWeight(3);
-  // create a rectangle at x,y coordinates 10,10 with length x height at 100 x 50
-  //reference points for rectangles is at TOP LEFT CORNER; account for shifts
-  rect(1099,499,100,500);
-  rect(1187,1,10,50);
-  rect(48,250,120,250);
+	background(125,125,125)
 
-  fill(84,38,75);
-  stroke(207,138,92);
-  strokeWeight(4);
 
-  rect(1,729,150,270);
-  rect(1,1,200,150);
-  rect(699,100,300,320);
-  rect(590,490,10,10);
+	if (mouseX > 10 && mouseX < 10 + 320 && mouseY > 10 && mouseY < 10+50)
+	{
+		fill(55,20,100);
+		stroke(0,0,0);
+		strokeWeight(3);
+		rect(10,10,315,50);
 
-  fill(22,22,129);
-  stroke(125,155,25);
-  strokeWeight(5);
+	}
+	else
+	{
+		fill(200,200,255);
+		stroke(0,0,0);
+		strokeWeight(3);
+		rect(10,10,315,50);
+	}
 
-  rect(199,499,204,203);
-  rect(212,47,283,37);
+	fill(255,255,255);
+	stroke(0,0,0);
+	textSize(18);
+	text("Click me for nothing to happen",35,40);
+    if (mouseIsPressed == true)
+    {
+      fill(147,247,14);
+      stroke(220,90,50);
+      textSize(20);
+      text("To be, or not to be, that is the question:",80,400);
+      text("Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune,",85,450);
+      text("Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep No more; and by a sleep,",90,480);
+      text("to say we end No more; and by a sleep, to say we end The heart-ache, and the thousand natural shocks That Flesh is heir to?",95,510);
+    }
 
-  fill(0,0,0);
-  stroke(255,255,255);
-  strokeWeight(2);
-  textSize(220);
-  text("hello there",407,309);
+	fill(200,200,255);
+	stroke(0,0,0);
+	rect(button2X,button2Y,290,50);
+
+	if (mouseX > button2X && mouseX < button2X + 180 && mouseY > button2Y && mouseY < button2Y+50)
+	{
+		fill(248,89,255);
+		stroke(51,70,190);
+		textSize(16);
+		text("this is a very very long box",button2X+30-5,button2Y+30+2);
+	}
+	else
+	{
+		fill(255,255,255);
+		stroke(30,30,30);
+    strokeWeight(2);
+		textSize(16);
+		text("Clikk mi now",button2X+30,button2Y+30);
+	}
+
 }
