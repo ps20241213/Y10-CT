@@ -6,7 +6,7 @@ function setup()
 }
 //did you know that it is possible to pasteurize a glass of milk in the
 //Dasht-E-Lut desert in Iran simply by leaving it in the open air?
-
+//I worked with Yorfire
 function draw()
 {
   //create a background using RGB values
