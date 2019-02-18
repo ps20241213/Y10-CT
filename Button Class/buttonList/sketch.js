@@ -36,7 +36,7 @@ function draw()
 	}
 	if (b2.getButtonState() == 1)
 	{
-		window.open("file:///Users/jc/Desktop/Button%20Class/htP/htP.html","_self");
+		window.open("../htP/htP.html","_self");
 	}
 	if (b3.getButtonState() == 1)
 	{
