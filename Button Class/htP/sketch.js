@@ -5,14 +5,14 @@ function setup()
 	createCanvas(500,500);
 	b1 = new Button(10,10,100,25);
 	b1.setText("BACK");
-	b1.setTextOver("GO");
+	b1.setTextOver("PRESS");
 	b1.setButtonOverFill(255,255,50);
 
 }
 
 function draw()
 {
-	background(125,125,125);
+	background(225,225,225);
 
 	b1.showButton();
 
@@ -23,7 +23,10 @@ function draw()
 		// name/name.html
 		// ../name.html = goes back to original folder
 		//_self = opens on this tab
-
 	}
+	stroke(0,0,0);
+
+	textSize(18);
+  text("Just click the right answer to progress to the next level",40,70);
 
 }
