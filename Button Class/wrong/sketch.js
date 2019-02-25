@@ -3,8 +3,8 @@ var b1;
 function setup()
 {
 	createCanvas(500,500);
-	b1 = new Button(10,10,100,25);
-	b1.setText("BACK");
+	b1 = new Button(15,15,100,30);
+	b1.setText("RETRY");
 	b1.setTextOver("GO");
 	b1.setButtonOverFill(255,255,50);
 }
@@ -25,11 +25,8 @@ function draw()
 	}
 	stroke(0,0,0);
 
-	textSize(16);
-  text("Click the right answer to progress to the next level",10,70);
-	text("If some buttons don't work, just use the back button on your browser.",10,100);
-	text("If your browser has no such button, please update your browser.",10,130);
-	text("This game is a trivia game, meaning that it will include stuff from",10,160);
-	text("every subject. Try not to cheat by using outside help.",10,190);
+	textSize(18);
+  text("You're Wrong!",30,70);
+	text("Try Again!",30,100);
 
 }
