@@ -25,7 +25,7 @@ function draw()
 	}
 	stroke(0,0,0);
 
-	textSize(18);
+	textSize(13);
   text("You're Wrong!",30,70);
 	text("Try Again!",30,100);
 
