@@ -15,8 +15,8 @@ function setup()
 	b2.setTextOver("GO");
 	b2.setButtonOverFill(255,255,50);
 
-	b3 = new Button(10,100,100,25);
-	b3.setText("PLAY");
+	b3 = new Button(10,100,170,25);
+	b3.setText("WARM UP QUESTIONS");
 	b3.setTextOver("GO");
 	b3.setButtonOverFill(255,255,50);
 

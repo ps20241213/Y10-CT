@@ -5,13 +5,13 @@ function setup()
 {
 	createCanvas(500,500);
 	//dimensions and size
-	b1 = new Button(10,10,100,25);
+	b1 = new Button(10,10,110,35);
 	b1.setText("MENU"); //default look
 	b1.setTextOver("GO");//when you move mouse over it
 	b1.setTextPressed("GO");
 	b1.setButtonOverFill(50,255,50);
 
-	b2 = new Button(10,80,100,25);
+	b2 = new Button(10,50,110,35);
 	b2.setText("OPTIONS"); //default look
 	b2.setTextOver("GO");//when you move mouse over it
 	b2.setTextPressed("GO");
@@ -20,8 +20,8 @@ function setup()
 
 function draw()
 {
-	background(255,255,255);
-
+	background(25,255,255);
+	textSize(13);
 	b1.showButton();//must have if the button is visible
 	b2.showButton();
 

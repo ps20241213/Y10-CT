@@ -42,6 +42,7 @@ function draw()
 	b1.showButton();
 	b2.showButton();
 	b3.showButton();
+	b4.showButton();
 
 	if (b1.getButtonState() == 1)
 	{
