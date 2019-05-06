@@ -61,11 +61,12 @@ function setup()
 
 
 	var enemySet2Photos = new Array(5);
-	enemySet2Photos[0] = loadImage('https://bleungwpg.github.io/resourcehosting/mathgame/twentythree.png');
-	enemySet2Photos[1] = loadImage('https://bleungwpg.github.io/resourcehosting/mathgame/fourtyfive.png');
-	enemySet2Photos[2] = loadImage('https://bleungwpg.github.io/resourcehosting/mathgame/fiftyfour.png');
-	enemySet2Photos[3] = loadImage('https://bleungwpg.github.io/resourcehosting/mathgame/fiftynine.png');
-	enemySet2Photos[4] = loadImage('https://bleungwpg.github.io/resourcehosting/mathgame/question2.png');
+	enemySet1Photos[0] = loadImage('https://ps20241213.github.io/yeehowdy-Y10-CT/Shooter%20Game%20Engine%20Class%20Criteria%20C%20Justin/Resources/spriteA.png');
+	enemySet1Photos[1] = loadImage('https://ps20241213.github.io/yeehowdy-Y10-CT/Shooter%20Game%20Engine%20Class%20Criteria%20C%20Justin/Resources/spriteB.png');
+	enemySet1Photos[2] = loadImage('https://ps20241213.github.io/yeehowdy-Y10-CT/Shooter%20Game%20Engine%20Class%20Criteria%20C%20Justin/Resources/spriteC.png');
+	enemySet1Photos[3] = loadImage('https://ps20241213.github.io/yeehowdy-Y10-CT/Shooter%20Game%20Engine%20Class%20Criteria%20C%20Justin/Resources/spriteD.png');
+	enemySet1Photos[4] = loadImage('https://ps20241213.github.io/yeehowdy-Y10-CT/Shooter%20Game%20Engine%20Class%20Criteria%20C%20Justin/Resources/Q2Q.png');
+
 
 
 	// set 5 enemies, no images, answer is 3
@@ -80,8 +81,6 @@ function setup()
 	enemySet3 = new EnemyManager(6,null,false,1);
 	enemySet3.setKillOutOfScreen(400);
 	enemySet3.setEnemySpeed(1.5);
-
-
 
 }
 
@@ -140,13 +139,14 @@ function draw()
 		// show the question
 		enemySet2.drawQuestion();
 
-
 		var gameState = enemySet2.drawEnemies(pm1);
 		if (gameState == -1)
 		{
 			// if enemies have reach the base
 			console.log('enemies have reached base, subtract health');
 			healthBar.deductHealth(1);
+			enemySet2.endQuestion();
+			enemySet3.startEnemies();
 		}
 		else if (gameState == 1)
 		{
