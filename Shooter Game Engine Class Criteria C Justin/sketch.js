@@ -53,8 +53,8 @@ function setup()
 	enemySet1 = new EnemyManager(4,enemySet1Photos,true,1);  // number of enemies, photos, random, answer
 	enemySet1.setQuestion(enemySet1Photos[5],10,0);  // photo, x, y
 	enemySet1.setEnemySpeed(1);
-	enemySet1.setLengthHeight(160,40);
-	enemySet1.setEnemySpacing(200);
+	enemySet1.setLengthHeight(60,40);
+	enemySet1.setEnemySpacing(150);
 	enemySet1.setKillOutOfScreen(400);
 	enemySet1.setDeathAnimation(deathAnimation);
 	enemySet1.startEnemies();
@@ -121,6 +121,8 @@ function draw()
 		{
 			// if answer has reach the base
 			console.log('answer has reached base, add score');
+			enemySet1.endQuestion();
+			enemySet2.startEnemies();
 		}
 		if (enemySet1.isAnswerAlive() == false)
 		{
