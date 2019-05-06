@@ -10,7 +10,7 @@ var healthBar;
 
 function setup()
 {
-	createCanvas(500,500);
+	createCanvas(1200,500);
 
 	// setup Score
 	score = new Score();
@@ -28,15 +28,15 @@ function setup()
 
 	// setup health bar
 	healthBar = new HealthBar(10,10); // starting health and maximum health
-	healthBar.setHealthBarXY(290,10);
+	healthBar.setHealthBarXY(10,110);
 
 	var enemySet1Photos = new Array(5);
-	enemySet1Photos[0] = loadImage('https://bleungwpg.github.io/resourcehosting/mathgame/one.png');
-	enemySet1Photos[1] = loadImage('https://bleungwpg.github.io/resourcehosting/mathgame/two.png');
-	enemySet1Photos[2] = loadImage('https://bleungwpg.github.io/resourcehosting/mathgame/three.png');
-	enemySet1Photos[3] = loadImage('https://bleungwpg.github.io/resourcehosting/mathgame/four.png');
-	enemySet1Photos[4] = loadImage('https://bleungwpg.github.io/resourcehosting/mathgame/five.png');
-	enemySet1Photos[5] = loadImage('https://bleungwpg.github.io/resourcehosting/mathgame/question1.png');
+	enemySet1Photos[0] = loadImage('https://ps20241213.github.io/yeehowdy-Y10-CT/Shooter%20Game%20Engine%20Class%20Criteria%20C%20Justin/Resources/spriteA.png');
+	enemySet1Photos[1] = loadImage('https://ps20241213.github.io/yeehowdy-Y10-CT/Shooter%20Game%20Engine%20Class%20Criteria%20C%20Justin/Resources/spriteB.png');
+	enemySet1Photos[2] = loadImage('https://ps20241213.github.io/yeehowdy-Y10-CT/Shooter%20Game%20Engine%20Class%20Criteria%20C%20Justin/Resources/spriteC.png');
+	enemySet1Photos[3] = loadImage('https://ps20241213.github.io/yeehowdy-Y10-CT/Shooter%20Game%20Engine%20Class%20Criteria%20C%20Justin/Resources/spriteD.png');
+	enemySet1Photos[4] = loadImage('https://ps20241213.github.io/yeehowdy-Y10-CT/Shooter%20Game%20Engine%20Class%20Criteria%20C%20Justin/Resources/Q1Q.png');
+	enemySet1Photos[5] = loadImage('https://ps20241213.github.io/yeehowdy-Y10-CT/Shooter%20Game%20Engine%20Class%20Criteria%20C%20Justin/Resources/Q1Q.png');
 
 
 	// setup explosionAnimation
@@ -53,8 +53,8 @@ function setup()
 	enemySet1 = new EnemyManager(4,enemySet1Photos,true,1);  // number of enemies, photos, random, answer
 	enemySet1.setQuestion(enemySet1Photos[5],10,0);  // photo, x, y
 	enemySet1.setEnemySpeed(1);
-	enemySet1.setLengthHeight(63,40);
-	enemySet1.setEnemySpacing(60);
+	enemySet1.setLengthHeight(160,40);
+	enemySet1.setEnemySpacing(200);
 	enemySet1.setKillOutOfScreen(400);
 	enemySet1.setDeathAnimation(deathAnimation);
 	enemySet1.startEnemies();
@@ -113,7 +113,10 @@ function draw()
 		{
 			// if enemies have reach the base
 			console.log('enemies have reached base, subtract health');
-			healthBar.deductHealth(1);
+			healthBar.deductHealth(3);
+			enemySet1.endQuestion();
+			enemySet2.startEnemies();
+
 		}
 		else if (gameState == 1)
 		{
