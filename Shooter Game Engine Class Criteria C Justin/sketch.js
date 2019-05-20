@@ -3,6 +3,8 @@ var playerImage;
 var enemySet1;
 var enemySet2;
 var enemySet3;
+var enemySet4;
+var enemySet5;
 var p1;
 var c1 = new Collision();
 var pm1 = new ProjectileManager(5);
@@ -214,15 +216,15 @@ function draw()
 	}
 	// END QUESTION 3 ----------------------------------------------------------
 
-	if (enemySet3.isQuestionFinished() == false)
+	if (enemySet4.isQuestionFinished() == false)
 	{
-		enemySet3.drawEnemies(pm1);
-		if (enemySet3.isAnswerAlive() == false)
+		enemySet4.drawEnemies(pm1);
+		if (enemySet4.isAnswerAlive() == false)
 		{
 			// add things like sound effects / increase or decrease score
 			console.log('answer has been shot!');
 			// ------- CUSTOM THE CODE BELOW ------ WHERE TO GO AFTER LAST QUESTION
-			window.open("mainmenu/mainmenu.html","_self");
+			window.open("buttonList/buttonList.html","_self");
 		}
 	}
 
