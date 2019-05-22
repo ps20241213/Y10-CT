@@ -24,7 +24,7 @@ function setup()
 	p1.setCharacterImage(playerImage,100,120);
 
 	// setup health bar
-	healthBar = new HealthBar(10,10); // starting health and maximum health
+	healthBar = new HealthBar(25,25); // starting health and maximum health
 	healthBar.setHealthBarXY(750,400);
 
 	var enemySet1Photos = new Array(5);
@@ -149,7 +149,7 @@ function draw()
 		{
 			// if enemies have reach the base
 			console.log('enemies have reached base, subtract health');
-			healthBar.deductHealth(3);
+			healthBar.deductHealth(5);
 			enemySet1.endQuestion();
 			enemySet2.startEnemies();
 
@@ -175,7 +175,7 @@ function draw()
 		{
 			// if enemies have reach the base
 			console.log('enemies have reached base, subtract health');
-			healthBar.deductHealth(3);
+			healthBar.deductHealth(5);
 			enemySet2.endQuestion();
 			enemySet3.startEnemies();
 		}
@@ -201,7 +201,7 @@ function draw()
 		{
 			// if enemies have reach the base
 			console.log('enemies have reached base, subtract health');
-			healthBar.deductHealth(3);
+			healthBar.deductHealth(5);
 			enemySet3.endQuestion();
 			enemySet4.startEnemies();
 		}
@@ -215,11 +215,34 @@ function draw()
 		}
 	}
 	// END QUESTION 3 ----------------------------------------------------------
-
 	if (enemySet4.isQuestionFinished() == false)
 	{
-		enemySet4.drawEnemies(pm1);
+		// show the question
+		enemySet4.drawQuestion();
+
+		var gameState = enemySet4.drawEnemies(pm1);
+		if (gameState == -1)
+		{
+			// if enemies have reach the base
+			console.log('enemies have reached base, subtract health');
+			healthBar.deductHealth(5);
+			enemySet4.endQuestion();
+			enemySet5.startEnemies();
+		}
+
 		if (enemySet4.isAnswerAlive() == false)
+		{
+			// if answer has been shot
+			console.log('answer has been shot!');
+			enemySet4.endQuestion();
+			enemySet5.startEnemies();
+		}
+	}
+
+	if (enemySet5.isQuestionFinished() == false)
+	{
+		enemySet5.drawEnemies(pm1);
+		if (enemySet5.isAnswerAlive() == false)
 		{
 			// add things like sound effects / increase or decrease score
 			console.log('answer has been shot!');
